@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href=style.css rel=stylesheet> -->
+        <title>Referer-based access control</title>
+
+
+        <style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Georgia', serif;
+  background: #f0f4f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+
+.container.is-page {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+}
+
+
+.navigation-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.top-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2a2a2a;
+}
+
+.top-links a {
+  color: #0056b3;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.top-links a:hover {
+  color: #003d80;
+  transform: translateY(-2px);
+}
+
+.top-links p {
+  color: #aaa;
+  font-weight: normal;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  color: #1e1e1e;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+#account-content {
+  background-color: #e0eae4;
+  border: 1px solid #dcdcdc;
+  padding: 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+}
+
+
+.footer-wrapper {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 14px;
+  color: #888;
+}
+
+        </style>
+    </head>
+    <body>
+      
+        <!-- <script src="scripte.js"></script> -->
+       
+        <div theme="">
+            <section class="maincontainer">
+                <div class="container is-page">
+                    <header class="navigation-header">
+                        <section class="top-links">
+                            <a href="/">Home</a><p>|</p>
+                            <a href="/admin">Admin panel</a><p>|</p>
+                            <a href="/my-account">My account</a><p>|</p>
+                            <a href="/logout">Log out</a><p>|</p>
+                        </section>
+                    </header>
+                    <header class="notification-header">
+                    </header>
+                    <h1>My Account</h1>
+                    <div id=account-content>
+                        <p>Your username is: <span id="username"></span> </p>
+                       
+                    </div>
+                </div>
+            </section>
+            <div class="footer-wrapper">
+            </div>
+        </div>
+       
+    </body>
+</html>

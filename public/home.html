@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 600px;
+      margin: 50px auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      background: #fff;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+      font-size: 20px;
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #003d80;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .credentials {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #000;
+    }
+   
+  </style>
+</head>
+<body>
+  <nav>
+   
+        <a href="/">Home</a>
+        <a href="/login">My Account</a>
+    
+   
+  </nav>
+
+  <div class="main">
+    <h1>Referer-based Access Control</h1>
+    <p>This lab controls access to certain admin functionality based on the <strong>Referer</strong> header.</p>
+    <p>You can familiarize yourself with the admin panel by logging in using the credentials below:</p>
+    <p class="credentials">administrator:admin</p>
+    <p>To solve the lab, log in using the credentials <strong>wiener:peter</strong> and exploit the flawed access controls to promote yourself to become an administrator.</p>
+  </div>
+</body>
+</html>

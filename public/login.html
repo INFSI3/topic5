@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- <link href=style.css rel=stylesheet> -->
+        <title>Referer-based access control</title>
+
+        <style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f0f4f8;
+  color: #1e1e1e;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+
+.container.is-page {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 50px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.navigation-header {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.top-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 16px;
+}
+
+.top-links a {
+  color: #0056b3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-links a:hover {
+  color: #003d80;
+}
+
+.top-links p {
+  color: #999;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+
+.login-form {
+  background:#e0eae4 ;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.login-form label {
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 50%; 
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  background: #fdfdfd;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+
+.button {
+  width: 70%;
+  padding: 14px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #003f87;
+}
+
+
+.footer-wrapper {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+}
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <script src="scripte.js"></script>
+       
+        <div theme="">
+            <section class="maincontainer">
+                <div class="container is-page">
+                    <header class="navigation-header">
+                        <section class="top-links">
+                            <a href="/">Home</a><p>|</p>
+                            <a href="/my-account">My account</a>
+                        </section>
+                    </header>
+                    <header class="notification-header">
+                    </header>
+                    <h1>Login</h1>
+                    <section>
+                        <form class=login-form method=POST action="/login">
+                            <label>Username</label>
+                            <input required type=username name="username" autofocus>
+                            <label>Password</label>
+                            <input required type=password name="password">
+                            <button class=button type=submit> Log in </button>
+                        </form>
+                    </section>
+                </div>
+            </section>
+            <div class="footer-wrapper">
+            </div>
+        </div>
+    </body>
+</html>
