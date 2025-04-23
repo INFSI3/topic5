@@ -1,148 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- <link href=style.css rel=stylesheet> -->
+        <link href=style.css rel=stylesheet>
         <title>Referer-based access control</title>
-        <style>
-            
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
-
-.maincontainer {
-  display: flex;
-  justify-content: center;
-  padding: 60px 20px;
-}
-
-.container.is-page {
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 40px 30px;
-  width: 100%;
-  max-width: 600px;
-}
-
-
-.navigation-header {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 15px;
-}
-
-.top-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  font-size: 16px;
-}
-
-.top-links a {
-  color: #0056b3;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.top-links a:hover {
-  color: #0056b3;
-}
-
-.top-links p {
-  color: #aaa;
-}
-
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.login-form label {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-/* .login-form select {
-  padding: 12px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fafafa;
-} */
-
-
-select {
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    margin: 4px 0px;
-    height: 30px;
-    border: 1px solid #e6e6e6;
-    padding: 4px;
-    background-color: white !important;
-    color: #333332;
-    font-family: inherit;
-    font-size: inherit;
-    min-width: 120px;
-    max-width: 320px;
-  }
-  select::-ms-expand {
-    display: none;
-  }
-  select:hover {
-    border: 1px solid #cbd0d1;
-  }
-  select:focus {
-    border: 1px solid #0071bc;
-  }
-
-/* Buttons */
-.button {
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background-color: #0056b3;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  margin-top: 10px;
-}
-
-.button:hover {
-  background-color: #0056b3;
-}
-
-
-.footer-wrapper {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 14px;
-  color: #aaa;
-}
-
-        </style>
+       
     </head>
     <body>
-        <script src="scripte.js"></script>
+       
        
         <div theme="">
             <section class="maincontainer">
@@ -158,12 +22,10 @@ select {
                     </header>
                     <form style='margin-top: 1em' class='login-form' action='/admin-roles' method='GET'>
                         <label>User</label>
-                        <select name='username'>
-                            <option value='carlos'>carlos (user)</option>
-                            <option value='administrator'>administrator (admin)</option>
-                            <option value='wiener'>wiener (user)</option>
-                            <option value='khadidja'>khadidja (user)</option>
-                        </select>
+                      
+                        <select name="username" id="user-select">
+                          <option disabled selected>Loading users...</option>
+                      </select>
                         <button class='button' name='action' value='upgrade' type='submit'> Upgrade user </button>
                         <button class='button' name='action' value='downgrade' type='submit'> Downgrade user </button>
                     </form>
@@ -172,5 +34,6 @@ select {
             <div class="footer-wrapper">
             </div>
         </div>
+        <script src="scripte.js"></script>
     </body>
 </html>
