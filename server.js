@@ -13,7 +13,7 @@ const app = express();
 const PORT = 3000;
 
 const users = [
-    { username: "wiener", password: "wiener", role: "user" },
+    { username: "wiener", password: "peter", role: "user" },
     { username: "administrator", password: "admin", role: "admin" },
     {username: "carlos", password: "carlos", role: "user"},
     {username: "khadidja", password: "0000", role: "user"},
